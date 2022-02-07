@@ -1,24 +1,46 @@
-# README
+# Project
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[tuiter-31.herokuapp.com](https://tuiter-31.herokuapp.com/)
 
-Things you may want to cover:
+## Install
 
-* Ruby version
+### Clone the repository
 
-* System dependencies
+```shell
+git clone git@github.com:RogerHerazo/tuiter-31.git
+cd tuiter-31
+```
 
-* Configuration
+### Check your Ruby version
 
-* Database creation
+```shell
+ruby -v
+```
 
-* Database initialization
+The ouput should start with something like `ruby 3.1.0`
 
-* How to run the test suite
+If not, install the right ruby version using [rbenv](https://github.com/rbenv/rbenv) (it could take a while):
 
-* Services (job queues, cache servers, search engines, etc.)
+```shell
+rbenv install 3.1.0
+```
 
-* Deployment instructions
+### Install dependencies
 
-* ...
+Using [Bundler](https://github.com/bundler/bundler) and [Yarn](https://github.com/yarnpkg/yarn):
+
+```shell
+bundle && yarn
+```
+
+### Initialize the database
+
+```shell
+rails db:create db:migrate
+```
+
+## Serve
+
+```shell
+rails s
+```
