@@ -1,6 +1,7 @@
 <h1>New room</h1>
-
-<%= render "form", room: @room %>
+<%= render "shared/modal" do %>
+  <%= render "form", room: @room %>
+<% end %>
 
 <br>
 
